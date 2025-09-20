@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Result Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📘 Student Result Management</h1>
+
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Student Name" required>
+    <input type="text" id="roll" placeholder="Roll Number" required>
+    <input type="number" id="math" placeholder="Math Marks" required min="0" max="100">
+    <input type="number" id="physics" placeholder="Physics Marks" required min="0" max="100">
+    <input type="number" id="chemistry" placeholder="Chemistry Marks" required min="0" max="100">
+    <button type="submit">Add / Update Student</button>
+  </form>
+
+  <h2>Student Results</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Math</th>
+        <th>Physics</th>
+        <th>Chemistry</th>
+        <th>Total</th>
+        <th>%</th>
+        <th>Grade</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Results</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Student Results</h1>
+  <a href="/students/new">Add Student</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Total</th>
+        <th>%</th>
+        <th>Grade</th>
+        <th>View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% students.forEach(s => { %>
+        <tr>
+          <td><%= s.name %></td>
+          <td><%= s.roll %></td>
+          <td><%= s.total %></td>
+          <td><%= s.percentage %></td>
+          <td><%= s.grade %></td>
+          <td><a href="/students/<%= s._id %>">View</a></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
